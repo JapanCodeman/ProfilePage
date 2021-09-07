@@ -1,0 +1,141 @@
+@import 'variables.scss';
+
+@mixin flex-config($justify-content: false, $flex-order: false, $flex-direction: false, $align-items: false) {
+    display: flex;
+
+    @if $justify-content != false {
+        justify-content: $justify-content;
+    }
+
+    @if $flex != false {
+        flex: $flex;
+    }
+
+    @if $flex-direction != false {
+        flex-direction: $flex-direction; 
+    }
+
+    @if $align-items != false {
+        align-items: $align-items;
+    }
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    @include flex-config($flex-direction: column);
+
+    .navbar-wrapper {
+        @include flex-config($align-items: center);
+        height: 100px;
+        width: 100vw;
+        position: fixed;
+        background-color: $navbar-bg;
+        font-family: 'Anton', sans-serif;
+
+        .navbar-name {
+            @include flex-config($align-items: center, $justify-content: center);
+            margin-left: 25px;
+            height: 60%;
+            width: 200px;
+            border-radius: $button-border-radius;
+            background: $button-bg;
+
+            a {
+                color: $primary-text-color;
+                text-decoration: none;
+                font-size: 2em;
+                text-shadow: 2px 2px black;
+            }
+        }
+        .nav-links {
+            @include flex-config($justify-content: space-between, $align-items: center);
+            height: 100%;
+            width: 400px;
+            margin-left: 20vw;
+            margin-right: 20vw;
+            border-radius: $button-border-radius;
+
+
+
+            .nav-link {
+                @include flex-config($justify-content: center, $align-items: center);
+                height: 1.4em;
+                width: 100px;
+                color: #fff;
+                background: $button-bg;
+                border-radius: $button-border-radius;
+
+                :hover {
+                    background-color: white;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: $link-text-color;
+                }
+            }
+        }
+    }
+
+    .main-page {
+        height: 80vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        background: $main-page-background;
+
+        .hero-image {
+            @include flex-config($justify-content: center, $align-items: center);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+            img {
+                height: 300px;
+                padding: 0px;
+                border-radius: 20px;
+                box-shadow: $img-box-shadow;
+            }
+
+        .welcome-message {
+            @include flex-config($justify-content: center, $flex-direction: column, $align-items: left);
+            padding-right: 300px;
+
+            .h1 {
+                font-family: 'Allison', banks-script; 
+            }
+        }
+    }
+
+    .footer-wrapper {
+        @include flex-config($justify-content: center, $align-items: center);
+        height: 100px;
+        width: 100%;
+
+        .footer-links {
+            @include flex-config($justify-content: space-between);
+            width: 50vw;
+
+            .footer-link {
+                font-size: 1.4em;
+
+                a {
+                    text-decoration: none;
+                    color: #000;
+                    transition: .3s;
+                
+
+                    &:hover {
+                        box-shadow: $link-highlight;
+                        cursor: pointer;
+                    }
+                }    
+            }
+        }
+    }
+}

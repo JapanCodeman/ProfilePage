@@ -1,0 +1,190 @@
+/* linear-gradient(180deg, rgba(135,138,36,1) 0%, rgba(219,218,15,1) 100%); */
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .navbar-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100px;
+  width: 100vw;
+  position: fixed;
+  background-color: #fff;
+  font-family: 'Anton', sans-serif;
+}
+
+.container .navbar-wrapper .navbar-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 25px;
+  height: 60%;
+  width: 200px;
+  border-radius: 5px;
+  background: #ffa68B;
+}
+
+.container .navbar-wrapper .navbar-name a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 2em;
+  text-shadow: 2px 2px black;
+}
+
+.container .navbar-wrapper .nav-links {
+  height: 100%;
+  width: 400px;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+}
+
+.container .navbar-wrapper .nav-links .nav-link {
+  height: 1.4em;
+  width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+  background: #ffa68B;
+  border-radius: 5px;
+}
+
+.container .navbar-wrapper .nav-links .nav-link :hover {
+  background-color: white;
+}
+
+.container .navbar-wrapper .nav-links .nav-link a {
+  text-decoration: none;
+  color: red;
+}
+
+.container .main-page {
+  height: 80vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  background: radial-gradient(circle, #723844 0%, #7b523c 100%);
+}
+
+.container .main-page .hero-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .main-page img {
+  height: 300px;
+  padding: 0px;
+  border-radius: 20px;
+  -webkit-box-shadow: 10px 10px 25px 5px rgba(0, 0, 0, 0.8);
+          box-shadow: 10px 10px 25px 5px rgba(0, 0, 0, 0.8);
+}
+
+.container .main-page .welcome-message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-right: 300px;
+}
+
+.container .main-page .welcome-message .h1 {
+  font-family: 'Allison', banks-script;
+}
+
+.container .footer-wrapper {
+  height: 100px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .footer-wrapper .footer-links {
+  width: 50vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .footer-wrapper .footer-links .footer-link {
+  font-size: 1.4em;
+}
+
+.container .footer-wrapper .footer-links .footer-link a {
+  text-decoration: none;
+  color: #000;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.container .footer-wrapper .footer-links .footer-link a:hover {
+  -webkit-box-shadow: 0px 0px 30px 5px rgba(255, 11, 11, 0.8);
+          box-shadow: 0px 0px 30px 5px rgba(255, 11, 11, 0.8);
+  cursor: pointer;
+}
+/*# sourceMappingURL=styles.css.map */
